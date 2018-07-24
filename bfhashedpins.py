@@ -2,7 +2,8 @@ from random import randint
 import hashlib
 
 minpin = 0
-maxpin = 9999
+#if you want to adjust the amount of digits the pin will be add or remove '9' from the variable maxpin below
+maxpin = 99999
 
 def createfile():
     pinint = randint(minpin, maxpin)
