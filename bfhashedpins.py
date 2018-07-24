@@ -2,7 +2,7 @@ from random import randint
 import hashlib
 
 def createfile():
-    pinint = randint(0,9999)
+    pinint = randint(0,999999)
     pin = str(pinint)
     print(pin)
     hash_object = hashlib.sha256(pin.encode())
@@ -26,4 +26,4 @@ def bruteforce(startnumber, endnumber):
         
 createfile()
 
-print("The pin number was " + bruteforce(0, 10000))
+print("The pin number was " + bruteforce(0, 1000000))
