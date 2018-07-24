@@ -1,8 +1,11 @@
 from random import randint
 import hashlib
 
+minpin = 0
+maxpin = 9999
+
 def createfile():
-    pinint = randint(0,999999)
+    pinint = randint(minpin, maxpin)
     pin = str(pinint)
     print(pin)
     hash_object = hashlib.sha256(pin.encode())
@@ -26,4 +29,4 @@ def bruteforce(startnumber, endnumber):
         
 createfile()
 
-print("The pin number was " + bruteforce(0, 1000000))
+print("The pin number was " + bruteforce(minpin, maxpin + 1))
